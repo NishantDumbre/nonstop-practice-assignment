@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { RootState } from "../Redux/store/store";
 import { candidateListItemProps } from "../Models/candidateListItem";
+import CandidateDetails from "./CandidateDetails";
 
 const CandidateDetailsSection = () => {
   const { id } = useParams<{ id: string }>();
@@ -11,9 +12,10 @@ const CandidateDetailsSection = () => {
   const filteredCandidate = candidateList.filter(
     (item: candidateListItemProps) => item.id === id
   );
-  const candidate = filteredCandidate[0]
-
-  return <div>{candidate && candidate.name}</div>;
+  console.log(filteredCandidate[0])
+  return (
+    <CandidateDetails candidate = {filteredCandidate[0]} />
+  );
 };
 
 export default CandidateDetailsSection;
