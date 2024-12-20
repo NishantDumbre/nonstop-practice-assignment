@@ -10,7 +10,7 @@ interface CandidateSkills{
     experience: string
 }
 
-interface CandidateExperience{
+export interface CandidateExperience{
     company:string,
     project:string,
     role:string,

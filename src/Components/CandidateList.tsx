@@ -15,9 +15,7 @@ const CandidateList = () => {
   }, [dispatch]);
 
   return (
-    <List
-      sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
-    >
+    <List className="w-full bg-white">
       {candidates.length > 0 && candidates.map((item)=>{
         const degree = item.education[item.education.length-1].degree
         const skillNames = item.skills.map((skill)=>skill.name).join(", ")

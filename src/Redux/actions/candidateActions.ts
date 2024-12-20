@@ -1,4 +1,4 @@
-import API_CLIENT from "../../apis/candidateApis";
+import API_CLIENT from "../../Apis/candidateApis";
 import { CandidateReducerInitialState } from "../../Models/candidateReduxTypes";
 import { Dispatch } from "redux";
 

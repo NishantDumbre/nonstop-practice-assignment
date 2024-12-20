@@ -12,10 +12,12 @@ const CandidateDetailsSection = () => {
   const filteredCandidate = candidateList.filter(
     (item: candidateListItemProps) => item.id === id
   );
-  console.log(filteredCandidate[0])
-  return (
-    <CandidateDetails candidate = {filteredCandidate[0]} />
-  );
+  
+  if(!filteredCandidate.length){
+    return <h1>Loading</h1>
+  }
+  
+  return <CandidateDetails candidate = {filteredCandidate[0]} />
 };
 
 export default CandidateDetailsSection;

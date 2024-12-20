@@ -7,12 +7,14 @@ import CandidateForm from "./Components/CandidateForm";
 import CandidateDetailsSection from "./Components/CandidateDetailsSection";
 import { Provider } from "react-redux";
 import store from "./Redux/store/store";
+import Auth from "./Views/Auth";
 
 function App() {
   return (
     <Provider store={store}>
       <Router>
         <Switch>
+          <Route exact path="/" component={() => <Auth />} />
           <PageContainer
             staticElement={<LeftSide />}
             dynamicElement={
